@@ -68,3 +68,17 @@ variable "config" {
     instance_count = 1
   }
 }
+
+
+variable "bucket_names" {
+  description = "List of bucket names"
+  type = list(string)
+  default = [ "my-unique-bucket-day08-4545", "my-unique-bucket-day08-4556" ]
+}
+
+
+variable "bucket_name_set" {
+  description = "List of bucket names"
+  type = set(string)
+  default = [ "my-unique-bucket-day08-5678", "my-unique-bucket-day08-3456" ]
+}

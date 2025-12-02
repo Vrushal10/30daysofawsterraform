@@ -3,7 +3,7 @@ resource "aws_instance" "sample-ec2" {
   ami = "resolve:ssm:/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64"
   instance_type = var.allowed_vm_type[1]
   # region = tolist(var.allowed_region)[0]
-  region = var.config.region
+  region = var.region
 
   monitoring = var.monitoring_enabled
   associate_public_ip_address = var.associate_public_ip_address
